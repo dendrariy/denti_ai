@@ -10,4 +10,8 @@ WORKDIR /app
 #copy local files
 COPY . .
 
-CMD python -m pytest tests
+#create reports dir
+RUN mkdir ./reports
+
+#run tests
+CMD python -m pytest tests --excelreport=/app/reports/report.xls

@@ -4,5 +4,5 @@ docker build -t test:latest .
 ```
 #### 2. Run tests in docker container
 ``` bash
-docker run --rm --platform linux/amd64 test:latest
+sudo docker run -v $PWD/:/app/reports/ --rm --platform linux/amd64 test:latest
 ```
